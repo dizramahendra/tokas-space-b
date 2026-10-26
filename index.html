@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOKAS Space B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="./assets/index-ClP7Urwv.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B6sazumQ.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <aside class="panel" id="panel">
+      <header>
+        <div>
+          <h1>Space B</h1>
+          <p>TOKAS Hongo · exhibition plan</p>
+        </div>
+        <button class="collapse" id="collapse" aria-label="Collapse panel">–</button>
+      </header>
+
+      <div class="body">
+        <section>
+          <h2>Layout</h2>
+          <div class="seg layout" data-group="layout">
+            <button data-layout="A" class="on">A · Wall screen</button>
+            <button data-layout="B">B · Hanging screen</button>
+          </div>
+        </section>
+
+        <section>
+          <h2>View</h2>
+          <div class="chips" data-group="view">
+            <button data-view="overview" class="on">Overview</button>
+            <button data-view="entrance">Entrance</button>
+            <button data-view="screen">Video screen</button>
+            <button data-view="farside" hidden>Far side</button>
+            <button data-view="slides">Slides</button>
+            <button data-view="structure">Wall structure</button>
+            <button data-view="bprime">Space B′</button>
+            <button data-view="plan">Plan</button>
+          </div>
+        </section>
+
+        <section class="rows">
+          <div class="row">
+            <span>Mode</span>
+            <div class="seg" data-group="mode">
+              <button data-mode="orbit" class="on">Orbit</button>
+              <button data-mode="walk">Walk</button>
+              <button data-mode="plan">Plan</button>
+            </div>
+          </div>
+          <div class="row">
+            <span>Light</span>
+            <div class="seg" data-group="light">
+              <button data-light="house" class="on">Gallery</button>
+              <button data-light="show">Exhibition</button>
+            </div>
+          </div>
+          <div class="row" id="hang-row">
+            <span>Hanging</span>
+            <div class="seg" data-group="hang">
+              <button data-hang="single">Single</button>
+              <button data-hang="double" class="on">Two screens</button>
+            </div>
+          </div>
+          <div class="row">
+            <span>Screen size</span>
+            <div class="seg" data-group="size">
+              <button data-size="large" class="on">Large</button>
+              <button data-size="medium">Medium</button>
+              <button data-size="small">Small</button>
+            </div>
+          </div>
+          <div class="row">
+            <span>Video shape</span>
+            <div class="seg" data-group="aspect">
+              <button data-aspect="4:3" class="on">4:3</button>
+              <button data-aspect="16:9">16:9</button>
+            </div>
+          </div>
+          <div class="row" id="video-row">
+            <span>Video</span>
+            <div class="seg" data-group="screen">
+              <button data-screen="built" class="on">Built screen</button>
+              <button data-screen="wall">On the wall</button>
+            </div>
+          </div>
+          <div class="row">
+            <span>Slide room</span>
+            <div class="seg" data-group="inner">
+              <button data-inner="low">Low wall</button>
+              <button data-inner="window">Window</button>
+              <button data-inner="curtain" class="on">Curtain</button>
+            </div>
+          </div>
+          <div class="row" id="curtain-row">
+            <span>Curtain</span>
+            <div class="seg" data-group="curtain">
+              <button data-curtain="low" class="on">Lower half</button>
+              <button data-curtain="high">Upper half</button>
+            </div>
+          </div>
+          <div class="row">
+            <span>Petal wall</span>
+            <div class="seg" data-group="petal">
+              <button data-petal="E" class="on">East</button>
+              <button data-petal="W">West</button>
+              <button data-petal="S">South</button>
+            </div>
+          </div>
+          <div class="row">
+            <span>Show</span>
+            <div class="seg multi">
+              <button data-toggle="labels" class="on">Labels</button>
+              <button data-toggle="beams" class="on">Beams</button>
+              <button data-toggle="people" class="on">People</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="actions">
+          <button id="add-media">Add image or video</button>
+          <button id="export" class="primary">Save A4 image</button>
+          <input type="file" id="file" accept="image/*,video/*" hidden />
+        </section>
+      </div>
+    </aside>
+
+    <div class="hint" id="hint"></div>
+
+    <div class="drop" id="drop">
+      <div class="drop-card">
+        <p id="drop-name">Put this file on</p>
+        <div class="chips">
+          <button data-target="video">Video screen</button>
+          <button data-target="slide">Slide</button>
+          <button data-target="tv">Small TV</button>
+          <button data-target="petal">Petal image</button>
+          <button data-target="frames">Framed pieces</button>
+        </div>
+        <button class="cancel" id="drop-cancel">Cancel</button>
+      </div>
+    </div>
+
+  </body>
+</html>
